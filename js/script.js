@@ -24,4 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
- 
+ const scrollBtn = document.getElementById("scrollToTop");
+window.addEventListener("scroll", () => {
+  scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
+});
+
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
