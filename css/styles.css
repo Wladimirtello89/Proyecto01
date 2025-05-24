@@ -240,3 +240,59 @@ img:hover {
     font-size: 18px;
   }
 }
+/* Logo con animación de respiración */
+.logo-animate {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+/* Línea animada debajo de los enlaces del navbar */
+.nav-link-animate {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.nav-link-animate::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #03a2a8;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link-animate:hover::after {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem !important; /* Puedes ajustar este valor */
+  }
+}
+
+@media (max-width: 480px) {
+  .display-4 {
+    font-size: 2.8rem !important; /* Aún más grande para pantallas pequeñas */
+  }
+}
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 2.6rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-principal {
+    font-size: 2.9rem !important;
+  }
+}
